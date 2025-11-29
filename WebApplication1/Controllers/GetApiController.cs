@@ -8,9 +8,10 @@ namespace WebApplication1.Controllers;
 public class GetApiController(BasicEntity.AppDbContext context) : ControllerBase
 {
     [HttpGet("obterDados")]
-    public void Get()
+    public async Task<IActionResult> Get()
     {
-        context.Categories.ToListAsync();
+        var categories = await context.Categories.ToListAsync();
+        return Ok(categories);
     }
 }
 
