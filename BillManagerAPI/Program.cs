@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using WebApplication1.Data;
+using BillManagerAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,7 +54,8 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    context.Database.EnsureCreated();
+    //context.Database.EnsureCreated();
+    context.Database.Migrate(); // Aplica migrations automaticamente
 }
 
 // Configure the HTTP request pipeline.

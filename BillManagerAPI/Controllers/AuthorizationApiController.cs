@@ -2,9 +2,8 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Data;
 
-namespace WebApplication1.Controllers;
+namespace BillManagerAPI.Controllers;
 [EnableCors]
 [ApiController]
 [Route("[controller]")]
@@ -13,8 +12,6 @@ public class AuthorizationApiController(
     SignInManager<IdentityUser> signInManager)
     : ControllerBase
 {
-    private readonly SignInManager<IdentityUser> _signInManager = signInManager;
-
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {

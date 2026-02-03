@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{C268249F-C2E0-4B83-8BA5-44A172FB9F08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManagerAPI", "BillManagerAPI\BillManagerAPI.csproj", "{C268249F-C2E0-4B83-8BA5-44A172FB9F08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

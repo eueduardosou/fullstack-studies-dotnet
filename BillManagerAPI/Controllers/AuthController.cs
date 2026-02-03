@@ -1,11 +1,11 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using BillManagerAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using WebApplication1.Entities;
 
-namespace WebApplication1.Controllers;
+namespace BillManagerAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

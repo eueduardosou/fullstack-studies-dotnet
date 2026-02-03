@@ -1,4 +1,4 @@
-namespace WebApplication1.Entities;
+namespace BillManagerAPI.Entities;
 
 public sealed class UserLogin
 {
