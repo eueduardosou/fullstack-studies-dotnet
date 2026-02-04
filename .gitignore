@@ -32,32 +32,44 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-# .NET Core
-project.lock.json
-project.fragment.lock.json
-artifacts/
+# Visual Studio 2015/2017 cache/options directory
+.vs/
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
+# JetBrains Rider
+.idea/
+*.sln.iml
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/**/usage.statistics.xml
+**/.idea/**/dictionaries
+**/.idea/**/shelf
+
+# Visual Studio Code
+.vscode/
+
+# Common node modules (if you add frontend later)
+node_modules/
+
+# Test Coverage
+*.coverage
+*.coveragexml
 
 # NuGet Packages
 *.nupkg
-# NuGet Symbol Packages
 *.snupkg
+**/packages/*
 
-# Others
-~$*
-*~
-CodeCoverage/
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# MSBuild Binary and Structured Log
-*.binlog
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+# Rider
+.idea/
+.idea_modules/
 
-# NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml
