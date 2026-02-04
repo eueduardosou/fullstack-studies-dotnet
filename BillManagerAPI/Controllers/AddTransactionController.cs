@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BillManagerAPI.Controllers;
 
-public class AddTransactionController([FromBody] Transaction transaction, ApplicationDbContext context ): ControllerBase 
+[ApiController]
+[Route("api/[controller]")]
+public class AddTransactionController(ApplicationDbContext context ): ControllerBase 
 {
-    public async Task<IActionResult> Post()
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] Transaction transaction)
     {
         await context.Transactions.AddAsync(new Transaction
         {
