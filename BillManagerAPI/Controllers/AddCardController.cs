@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BillManagerAPI.Controllers;
 
-public class AddCardController([FromBody] Card cardData, ApplicationDbContext context): ControllerBase
+[ApiController]
+[Route("api/[controller]")]
+public class AddCardController(ApplicationDbContext context): ControllerBase
 {
-    public async Task<IActionResult> Post()
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] Card cardData)
     {
         await context.Cards.AddAsync(new Card
         {
